@@ -1,0 +1,18 @@
+# === Logo ===
+bot_logo = """
+ _____
+  | o 0 |
+   -----
+   """
+print(bot_logo)
+
+# === Introduction ===
+intro = "Hi, I'm Calc-Bot 🤖"
+print(intro)
+
+# Your arithmetic code here!
+result = 5 * 4
+
+# === Skill ===
+bot_skill = f"I can multiply! 5 times 4 is {result}"
+print(bot_skill)
