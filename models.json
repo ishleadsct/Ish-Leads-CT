@@ -1,0 +1,99 @@
+[
+  {
+    "role": "gatekeeper",
+    "name": "Meta-Llama-3-8B-Instruct",
+    "path": "/storage/emulated/0/AI_Models/.ultra_ai/models/Meta-Llama-3-8B-Instruct.Q4_K_M.gguf",
+    "port": 8082,
+    "threads": 6,
+    "context": 4096,
+    "priority": 1,
+    "notes": "Primary conversational model. Always-on unless paused for heavy specialist. Q4_K_M for speed/memory balance."
+  },
+  {
+    "role": "librarian",
+    "name": "Qwen2-1.5B-Instruct",
+    "path": "/storage/emulated/0/AI_Models/.ultra_ai/models/Qwen2-1.5B-Instruct.Q4_K_M.gguf",
+    "port": 8083,
+    "threads": 4,
+    "context": 3072,
+    "priority": 1,
+    "notes": "Research, retrieval, KB management. Always-on unless paused to free resources."
+  },
+  {
+    "role": "specialist",
+    "name": "Qwen2-7B-Instruct",
+    "path": "/storage/emulated/0/AI_Models/.ultra_ai/models/Qwen2-7B-Instruct.Q4_K_M.gguf",
+    "port": 8084,
+    "threads": 6,
+    "context": 4096,
+    "priority": 2,
+    "domain": ["general", "reasoning"],
+    "notes": "Heavier specialist; strong generalist reasoning. Started on-demand after Dive Deeper."
+  },
+  {
+    "role": "specialist",
+    "name": "mistral-7b-instruct-v0.2",
+    "path": "/storage/emulated/0/AI_Models/.ultra_ai/models/mistral-7b-instruct-v0.2.Q4_K_M.gguf",
+    "port": 8085,
+    "threads": 6,
+    "context": 4096,
+    "priority": 3,
+    "domain": ["general", "writing", "analysis"],
+    "notes": "General-purpose specialist. Good fallback if Qwen2-7B unavailable."
+  },
+  {
+    "role": "specialist",
+    "name": "zephyr-7b-beta",
+    "path": "/storage/emulated/0/AI_Models/.ultra_ai/models/zephyr-7b-beta.Q4_K_M.gguf",
+    "port": 8086,
+    "threads": 6,
+    "context": 4096,
+    "priority": 4,
+    "domain": ["general", "chat"],
+    "notes": "Chat-tuned specialist. Later fallback due to similar footprint to other 7B models."
+  },
+  {
+    "role": "specialist",
+    "name": "Phi-3-mini-4k-instruct",
+    "path": "/storage/emulated/0/AI_Models/.ultra_ai/models/Phi-3-mini-4k-instruct.Q4_K_M.gguf",
+    "port": 8087,
+    "threads": 4,
+    "context": 4096,
+    "priority": 0,
+    "domain": ["fast_general", "constrained_resources"],
+    "notes": "Lightweight specialist; preferred fallback when RAM is tight. Starts fast."
+  },
+  {
+    "role": "specialist",
+    "name": "DeepSeek-Coder-V2-Lite-Instruct",
+    "path": "/storage/emulated/0/AI_Models/.ultra_ai/models/DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf",
+    "port": 8088,
+    "threads": 6,
+    "context": 4096,
+    "priority": 1,
+    "domain": ["coding", "reasoning_on_code"],
+    "notes": "Coding-focused specialist. First pick for programming tasks if resources allow."
+  },
+  {
+    "role": "specialist",
+    "name": "stable-code-3b",
+    "path": "/storage/emulated/0/AI_Models/.ultra_ai/models/stable-code-3b.Q4_K_M.gguf",
+    "port": 8089,
+    "threads": 4,
+    "context": 4096,
+    "priority": -1,
+    "domain": ["coding", "lightweight_coding"],
+    "notes": "Very lightweight coding specialist; preferred under low-memory conditions."
+  },
+  {
+    "role": "specialist",
+    "name": "CodeLlama-7B-Instruct",
+    "path": "/storage/emulated/0/AI_Models/.ultra_ai/models/CodeLlama-7B-Instruct.Q4_K_M.gguf",
+    "port": 8090,
+    "threads": 6,
+    "context": 4096,
+    "priority": 3,
+    "domain": ["coding"],
+    "notes": "Coding specialist; heavier than stable-code-3b, later in fallback order."
+  }
+]
