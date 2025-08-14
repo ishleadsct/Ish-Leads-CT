@@ -144,7 +144,7 @@ You can skip large models during install and add them later by re-running instal
 If storage is tight, prefer smaller models like Phi-3-mini-4k and stable-code-3b.
 
 License
-MIT
+Licensed under the MIT
 
 Credits
 
