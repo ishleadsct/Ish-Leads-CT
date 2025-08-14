@@ -145,6 +145,7 @@ If storage is tight, prefer smaller models like Phi-3-mini-4k and stable-code-3b
 
 License
 Licensed under the MIT
+See LICENSE file.
 
 Credits
 
